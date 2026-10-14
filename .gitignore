@@ -1,0 +1,12 @@
+
+.godot/
+
+*.apk
+*.aab
+export_presets.cfg   # only ignore this if it contains secrets (keystore passwords)
+
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

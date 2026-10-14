@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://d2ukepxbnsrjn"]
+
+[ext_resource type="Script" uid="uid://div1bawf0ugdc" path="res://scripts/battle_scene.gd" id="1_th188"]
+[ext_resource type="Script" uid="uid://c6b1remj7lgbc" path="res://scripts/battle.gd" id="2_p1qf1"]
+
+[node name="Battle" type="Control" unique_id=1872800778]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_th188")
+
+[node name="InfoPanel" type="Panel" parent="." unique_id=756718152]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 230.0
+
+[node name="OpenButton" type="Button" parent="InfoPanel" unique_id=874102948]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 228.0
+offset_bottom = 48.0
+
+[node name="TerrainLabel" type="Label" parent="InfoPanel" unique_id=555692046]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 80.0
+offset_right = 56.0
+offset_bottom = 103.0
+
+[node name="PhaseLabel" type="Label" parent="InfoPanel" unique_id=1689782578]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 108.0
+offset_right = 56.0
+offset_bottom = 131.0
+
+[node name="PhaseProgress" type="ProgressBar" parent="InfoPanel" unique_id=32183679]
+layout_mode = 0
+offset_top = 206.0
+offset_right = 240.0
+offset_bottom = 233.0
+
+[node name="Arena" type="Control" parent="." unique_id=1605523012]
+anchors_preset = 0
+offset_left = 240.0
+offset_right = 1216.0
+offset_bottom = 230.0
+script = ExtResource("2_p1qf1")
+
+[node name="Background" type="ColorRect" parent="Arena" unique_id=1160324984]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 120.0
+color = Color(1.4439226e-07, 0.397449, 0.30846238, 1)
+
+[node name="Ground" type="TileMapLayer" parent="Arena" unique_id=1135142816]
+
+[node name="PlayerRect" type="ColorRect" parent="Arena" unique_id=87992061]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 56.0
+offset_right = 112.0
+offset_bottom = 88.0
+color = Color(0.2784314, 0.48235294, 1, 1)
+
+[node name="PlayerBar" type="ProgressBar" parent="Arena" unique_id=1098119664]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 40.0
+offset_right = 128.0
+offset_bottom = 50.0
+show_percentage = false
+
+[node name="EnemyRect" type="ColorRect" parent="Arena" unique_id=1969402760]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 56.0
+offset_right = 560.0
+offset_bottom = 88.0
+color = Color(1, 0.3019608, 0, 1)
+
+[node name="EnemyBar" type="ProgressBar" parent="Arena" unique_id=2040498642]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 40.0
+offset_right = 576.0
+offset_bottom = 50.0
+show_percentage = false
